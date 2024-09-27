@@ -17,6 +17,11 @@ This project contains an Azure Function designed to [describe the primary purpos
 - **Visual Studio Code**: Recommended IDE for development.
 - **.NET SDK**: Required for building and running the function locally.
 
+## Configuration
+
+- **local.settings.json**: Contains local configuration settings.
+- **host.json**: Contains global configuration options that affect all functions in the project.
+ 
 ## Steps
 
 ### Create your local project
@@ -45,6 +50,8 @@ Visual Studio Code integrates with Azure Functions Core tools to let you run thi
 3. With Core Tools running, go to the `Azure: Functions` area. Under `Functions`, expand `Local Project > Functions`. Right-click the `HttpExample` function and choose `Execute Function Now...`.
 4. In `Enter request body` type the request message body value of `{ "name": "Azure" }`. Press Enter to send this request message to your function. When the function executes locally and returns a response, a notification is raised in Visual Studio Code. Information about the function execution is shown in Terminal panel.
 5. Press Shift + F5 to stop Core Tools and disconnect the debugger.
+   
+![vscode](https://github.com/user-attachments/assets/29dc3679-2fe4-4d28-ab46-4b01e06badf0)
 
 ### Sign in to Azure
 
@@ -66,6 +73,8 @@ In this section, you create the Azure resources you need to deploy your local fu
    - **Select a location for new resources**: For better performance, choose a region near you.
    - **Select subscription**: Choose the subscription to use. You won't see this if you only have one subscription.
 
+  ![register_azure function](https://github.com/user-attachments/assets/a0e7ec6f-a3ef-4f7d-bc38-09e9bb788367)
+
 The extension shows the status of individual resources as they're being created in Azure in the `AZURE: ACTIVITY LOG` area of the terminal window.
 
 When completed, the following Azure resources are created in your subscription, using names based on your function app name:
@@ -75,19 +84,19 @@ When completed, the following Azure resources are created in your subscription, 
 - A consumption plan, which defines the underlying host for your serverless function app.
 - A function app, which provides the environment for executing your function code. A function app lets you group functions as a logical unit for easier management, deployment, and sharing of resources within the same hosting plan.
 - An Application Insights instance connected to the function app, which tracks usage of your serverless function.
+  
+![function_in_azure](https://github.com/user-attachments/assets/e29efc52-2c5a-4303-ad3e-9119e4a742ba)
 
 ## Run the function in Azure
 
 1. Back in the `Resources` area in the side bar, expand your subscription, your new function app, and `Functions`. Right-click the `HttpExample` function and choose `Execute Function Now...`.
 2. In `Enter request body` you see the request message body value of `{ "name": "Azure" }`. Press Enter to send this request message to your function.
 3. When the function executes in Azure and returns a response, a notification is raised in Visual Studio Code.
+
+![function_created_in_azure](https://github.com/user-attachments/assets/9e8956b9-a922-44c5-b261-55645dacc5dd)
+
 4. Otherwise, you can trigger the Azure function from the Azure portal.
-
-## Configuration
-
-- **local.settings.json**: Contains local configuration settings.
-- **host.json**: Contains global configuration options that affect all functions in the project.
-
+  
 ## Conclusion
 
 In conclusion, you can efficiently create, test, run, and deploy an Azure Function using Visual Studio Code. This setup facilitates streamlined development and testing of serverless functions, harnessing the capabilities of Azure's cloud infrastructure.
