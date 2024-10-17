@@ -1,4 +1,4 @@
-# Azure function local development and testing
+# Azure Functions for Serverless Applications: Local Development and Testing
 
 ## Overview
 
